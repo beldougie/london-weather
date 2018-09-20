@@ -46,3 +46,8 @@
 		margin: auto;
 		border-radius: 1em;
 }
+
+.current-weather {
+	font-size: 3em;
+	color: #382F2D
+}
