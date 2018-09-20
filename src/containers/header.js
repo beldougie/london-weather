@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from '../logo.svg';
+import '../assets/styles/App.css';
+import sun from '../assets/img/sun.svg';
 
 class Header extends Component {
 	constructor(props = { city: '' }) {
@@ -20,7 +21,7 @@ class Header extends Component {
 	render() {
 		return (
 			<header className="app-header">
-				<img src={logo} className="app-logo" alt="logo" />
+				<img src={sun} className="app-logo" alt="logo" />
 				<h1 className="app-title">{this.getTitle()}</h1>
 			</header>
 		);
