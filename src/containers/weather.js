@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash.isempty';
 import { loadWeather } from '../actions/weather';
+import WeatherHeader from '../components/weatherHeader';
 
 class WeatherContainer extends Component {
   constructor(props) {
@@ -27,6 +28,12 @@ class WeatherContainer extends Component {
   render() {
     return (
 			<div className="weather-panel">
+				<div className="card text-left">
+					<div className="card-header">Current Weather</div>
+					<div className="card-body">
+						<WeatherHeader {...this.state.current.weather[0]} />
+					</div>
+				</div>
 				<pre>{JSON.stringify(this.state, null, 2)}</pre>
 			</div>
 		)
