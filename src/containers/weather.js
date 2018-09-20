@@ -26,7 +26,7 @@ class WeatherContainer extends Component {
 
   render() {
     return (
-			<div>
+			<div className="weather-panel">
 				<pre>{JSON.stringify(this.state, null, 2)}</pre>
 			</div>
 		)
