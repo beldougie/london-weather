@@ -27,6 +27,10 @@ class WeatherContainer extends Component {
   }
 
   render() {
+		if(this.state.loading) {
+			return (<h1>LOADING!</h1>);
+		}
+
     return (
 			<div className="weather-panel">
 				<div className="card text-left">
