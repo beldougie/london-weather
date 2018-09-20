@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import isEmpty from 'lodash.isempty';
 import { loadWeather } from '../actions/weather';
 import WeatherHeader from '../components/weatherHeader';
+import CurrentWeatherIcon from './currentIcon';
 
 class WeatherContainer extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class WeatherContainer extends Component {
 				<div className="card text-left">
 					<div className="card-header">Current Weather</div>
 					<div className="card-body">
+						<CurrentWeatherIcon />
 						<WeatherHeader {...this.state.current.weather[0]} />
 					</div>
 				</div>
