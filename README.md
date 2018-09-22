@@ -13,6 +13,7 @@ Checkout the project from github and navigate to the created directory (project 
 ```sh
 git clone https://github.com/beldougie/london-weather.git
 cd london-weather
+npm i
 ```
 
 In order to run the application, you will need a valid ApiKey for [openweathermap.org](https://openweathermap.org). Copy the `.env` file to `.env.local` and replace the `<OWM_APIKEY>` placeholder with your ApiKey. This is done to protect my key from abuse as this project is publicly available.
