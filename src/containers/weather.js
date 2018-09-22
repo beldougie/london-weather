@@ -41,7 +41,6 @@ class WeatherContainer extends Component {
 					</div>
           <WeatherFooter />
 				</div>
-				<pre>{JSON.stringify(this.state, null, 2)}</pre>
 			</div>
 		)
   }
