@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash.isempty';
 import { loadWeather } from '../actions/weather';
+import LoadingAnimation from '../components/loadingAnimation';
+import Header from './header';
 import WeatherHeader from '../components/weatherHeader';
 import WeatherDetail from '../components/weatherDetail';
 import WeatherFooter from '../components/weatherFooter';
@@ -14,10 +16,9 @@ class WeatherContainer extends Component {
 	}
 	
 	static getDerivedStateFromProps(nextProps, prevState) {
-		// TODO this is too basic... make sure no mutation can occur
 		return {
 			...prevState,
-			...nextProps
+      ...nextProps
 		} 
 	}
 
@@ -28,21 +29,29 @@ class WeatherContainer extends Component {
   }
 
   render() {
-		if(isEmpty(this.state.current)) {
-			return (<h1>LOADING!</h1>);
-		}
+    if(isEmpty(this.state.current)) {
+      return (
+        <div className="app">
+          <LoadingAnimation />;
+        </div>
 
-    return (
-			<div className="weather-panel">
-				<div className="card text-left">
-					<WeatherHeader {...this.state.current.weather[0]} />
-					<div className="card-body">
-            <WeatherDetail {...this.state.current.main} scale={this.state.tempScale} />
-					</div>
-          <WeatherFooter />
-				</div>
-			</div>
-		)
+      )
+		} else {
+      return (
+        <div className="app">
+          <Header />
+          <div className="weather-panel">
+            <div className="card text-left">
+              <WeatherHeader {...this.state.current.weather[0]} />
+              <div className="card-body">
+                <WeatherDetail {...this.state.current.main} scale={this.state.tempScale} />
+              </div>
+              <WeatherFooter />
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
