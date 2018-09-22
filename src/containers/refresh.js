@@ -42,7 +42,7 @@ class RefreshControl extends Component {
 
   render() {
     return (
-      <div className="btn-group">
+      <div className="btn-group align-self-center d-flex flex-wrap flex-sm-nowrap">
         {this.state.periods.map(([period, label]) => {
           return this.renderButton(label, period, period === this.state.refreshPeriod);
         })}

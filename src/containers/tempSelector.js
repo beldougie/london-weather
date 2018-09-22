@@ -33,7 +33,7 @@ class TemperatureSelector extends Component {
   
   render() {
     return (
-      <div className="btn-group">
+      <div className="btn-group mb-1 align-self-center">
         {this.renderButton('fahrenheit', this.state.active)}
         {this.renderButton('celsius', this.state.active)}
       </div>
