@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Please see the [original documentation](https://github.com/facebook/create-react-app#user-guide) for information about the underlying build/dev appraoch.
+Please see the [original documentation](https://github.com/facebook/create-react-app#user-guide) for information about the underlying build/dev appraoch. Key points are included below.
 
 ## Install and Run
 
@@ -11,8 +11,7 @@ Instructions here are defined for a local deployment only. The approach used eas
 Checkout the project from github and navigate to the created directory (project root).
 
 ```sh
-## TODO add correct github url
-git clone <url>
+git clone https://github.com/beldougie/london-weather.git
 cd london-weather
 ```
 
