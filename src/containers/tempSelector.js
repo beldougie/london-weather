@@ -19,9 +19,9 @@ class TemperatureSelector extends Component {
   renderButton(scale) {
     const active = this.state.active === scale ? 'active' : '';
     return (
-      <label className={`btn btn-info ${active}`} onClick={this.buildClickHandler(scale)}>
+      <button className={`btn btn-info ${active}`} onClick={this.buildClickHandler(scale)}>
         <i className={`wi wi-${scale}`}></i>
-      </label>
+      </button>
     );
   }
 
@@ -33,7 +33,7 @@ class TemperatureSelector extends Component {
   
   render() {
     return (
-      <div className="btn-group btn-group">
+      <div className="btn-group">
         {this.renderButton('fahrenheit', this.state.active)}
         {this.renderButton('celsius', this.state.active)}
       </div>

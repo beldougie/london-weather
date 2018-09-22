@@ -28,7 +28,7 @@ class WeatherContainer extends Component {
   }
 
   render() {
-		if(this.state.loading) {
+		if(isEmpty(this.state.current)) {
 			return (<h1>LOADING!</h1>);
 		}
 
