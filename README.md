@@ -16,7 +16,7 @@ cd london-weather
 npm i
 ```
 
-In order to run the application, you will need a valid ApiKey for [openweathermap.org](https://openweathermap.org). Copy the `.env` file to `.env.local` and replace the `<OWM_APIKEY>` placeholder with your ApiKey. This is done to protect my key from abuse as this project is publicly available.
+In order to run the application, you will need a valid ApiKey for [openweathermap.org](https://openweathermap.org). Copy the `.env` file to `.env.local`, open the new file in a text editor and replace the `<OWM_APIKEY>` placeholder with your ApiKey. This is done to protect my key from abuse as this project is publicly available.
 
 Run `npm start` in your terminal from the project root to build and start the application in development mode. It is possible to build a 'production' version of the application using `npm run build` in order to run the application from a webserver or cloud storage bucket (S3 for example).
 
