@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash.isempty';
 import { loadWeather } from '../actions/weather';
+import LoadingAnimation from '../components/loadingAnimation';
 import Header from './header';
 import WeatherHeader from '../components/weatherHeader';
 import WeatherDetail from '../components/weatherDetail';
@@ -28,8 +29,11 @@ class WeatherContainer extends Component {
   }
 
   render() {
-		if(isEmpty(this.state.current)) {
-			return (<h1>LOADING!</h1>);
+    if(isEmpty(this.state.current)) {
+      return (
+        <div className="app">
+          <LoadingAnimation />;
+        </div>
 
       )
 		} else {
