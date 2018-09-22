@@ -9,15 +9,13 @@ class CurrentWeatherIcon extends Component {
 	}
 
 	render() {
-		return <OwmIcon {...this.state} classOverrides="current-weather" />
+		return <OwmIcon {...this.state} classOverrides="current-weather float-left" />
 	}
 }
 
 const mapStateToProps = state => {
-	console.log('state', state);
 	const { weather, sys } = state.weather.current;
 	const { sunrise, sunset } = sys;
-	console.log('weather:', weather[0]);
 	
 	return {
 		id: weather[0].id,
