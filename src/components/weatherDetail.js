@@ -1,12 +1,22 @@
 import React from 'react';
 
-export default props => {
+export default ({ temp, scale, pressure, humidity }) => {
   return (
-    <ul className="list-group text-center d-flex flex-row">
-      <li className="list-group-item flex-fill"><strong><i className="wi wi-thermometer" title="Temperature"></i></strong> {props.temp}</li>
-      <li className="list-group-item flex-fill"><strong><i className="wi wi-barometer" title="Air pressure"></i></strong> {props.pressure}</li>
-      <li className="list-group-item flex-fill"><strong><i className="wi wi-humidity" title="Humidity"></i></strong> {props.humidity}%</li>
-    </ul>
+    <div className="weather-details d-flex justify-content-center flex-md-row flex-column align-items-center">
+      <div className="text-xs-center text-md-center col-xs-5 col-sm-6 col-md-4">
+        <i className="wi wi-thermometer" title="Temperature"></i>
+         {` ${temp}`}
+         <sup><i className={`wi wi-${scale}`}></i></sup>
+      </div>
+      <div className="text-xs-center text-md-center col-xs-5 col-sm-6 col-md-4">
+        <i className="wi wi-barometer" title="Air pressure"></i>
+        {` ${pressure}`}
+      </div>
+      <div className="text-xs-center text-md-center col-xs-5 col-sm-6 col-md-4">
+        <i className="wi wi-humidity" title="Humidity"></i>
+         {` ${humidity}%`}
+      </div>
+    </div>
   );
 }
   

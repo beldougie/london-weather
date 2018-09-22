@@ -55,3 +55,8 @@
 .weather-panel .card-header div {
   padding: 0.5em;
 }
+
+.weather-details div {
+  font-size: 2em;
+  padding: 1em;
+}

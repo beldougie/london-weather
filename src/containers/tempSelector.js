@@ -19,7 +19,7 @@ class TemperatureSelector extends Component {
   renderButton(scale) {
     const active = this.state.active === scale ? 'active' : '';
     return (
-      <label className={`btn btn-secondary ${active}`} onClick={this.buildClickHandler(scale)}>
+      <label className={`btn btn-info ${active}`} onClick={this.buildClickHandler(scale)}>
         <i className={`wi wi-${scale}`}></i>
       </label>
     );

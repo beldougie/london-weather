@@ -37,7 +37,7 @@ class WeatherContainer extends Component {
 				<div className="card text-left">
 					<WeatherHeader {...this.state.current.weather[0]} />
 					<div className="card-body">
-            <WeatherDetail {...this.state.current.main} />
+            <WeatherDetail {...this.state.current.main} scale={this.state.tempScale} />
 					</div>
           <WeatherFooter />
 				</div>

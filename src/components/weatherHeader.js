@@ -4,7 +4,7 @@ import Clock from './clock';
 
 export default ({ main, description }) => {
 	return (
-    <div className="d-flex flex-lg-row flex-sm-column align-items-center justify-content-between card-header">
+    <div className="d-flex flex-column flex-md-row text-left text-xs-center align-items-center justify-content-between card-header">
       <div>
         <CurrentWeatherIcon />
       </div>
