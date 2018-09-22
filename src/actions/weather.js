@@ -14,6 +14,7 @@ export const loadWeather = (city, scale='celsius') => dispatch => {
       return dispatch({ type: WEATHER_LOADED, payload: results });
     })
     .catch(err => {
+      // while the HTTP error is handled here, this path isn't implemented in the UI
       return dispatch({ type: WEATHER_LOADED, payload: { error: err } });
     });
 };
