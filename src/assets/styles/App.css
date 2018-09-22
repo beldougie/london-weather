@@ -1,0 +1,62 @@
+.app {
+    color: white;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/london.jpg);
+    background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+}
+
+.app-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 90px;
+}
+
+.app-header {
+    background-color: rgba(34, 34, 34, 0.7);
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.app-title {
+    font-size: 1.5em;
+}
+
+.app-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.weather-panel {
+    color: darkslategrey;
+    font-size: large;
+		background: rgba(255, 255, 255, 0.6);
+		width: 80%;
+		margin: 5em auto;
+		border-radius: 1em;
+}
+
+.current-weather {
+	font-size: 3em;
+	color: #382F2D
+}
+
+.weather-panel .card-header div {
+  padding: 0.5em;
+}
+
+.weather-details div {
+  font-size: 2em;
+  padding: 1em;
+}
