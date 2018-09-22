@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { refreshCurrent } from '../actions/weather';
 
 class RefreshControl extends Component {
 
   constructor(props) {
     super(props);
+    this.dispatch = props.dispatch;
     this.state = {
       refreshPeriod: 300,
       interval: null,
@@ -19,19 +21,14 @@ class RefreshControl extends Component {
 
   setInterval() {
     if(this.state.interval !== null) clearInterval(this.state.interval);
-
     if(this.state.refreshPeriod === 0) return this.setState({ interval: null });
 
-    const interval = setInterval(() => {
-      console.log('tick');
-    }, this.state.refreshPeriod * 1000);
+    const interval = setInterval(() => this.dispatch(refreshCurrent()), this.state.refreshPeriod * 1000);
     this.setState({ interval });    
   }
 
   buildClickHandler(value) {
-    return () => {
-      this.setState({ refreshPeriod: value }, () => this.setInterval());
-    }
+    return () => this.setState({ refreshPeriod: value }, () => this.setInterval());
   }
 
   renderButton(label, value, isActive) {
@@ -54,4 +51,8 @@ class RefreshControl extends Component {
   }
 }
 
-export default connect()(RefreshControl);
+const mapDispatchToProps = dispatch => {
+  return { dispatch };
+}
+
+export default connect(null, mapDispatchToProps)(RefreshControl);
