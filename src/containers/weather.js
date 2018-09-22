@@ -4,6 +4,7 @@ import isEmpty from 'lodash.isempty';
 import { loadWeather } from '../actions/weather';
 import WeatherHeader from '../components/weatherHeader';
 import WeatherDetail from '../components/weatherDetail';
+import WeatherFooter from '../components/weatherFooter';
 
 class WeatherContainer extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class WeatherContainer extends Component {
 					<div className="card-body">
             <WeatherDetail {...this.state.current.main} />
 					</div>
+          <WeatherFooter />
 				</div>
 				<pre>{JSON.stringify(this.state, null, 2)}</pre>
 			</div>
