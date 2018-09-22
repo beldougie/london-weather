@@ -6,7 +6,14 @@ class Clock extends Component {
     super(props);
     this.state = { tz: props.timezone };
     this.state.time = moment.tz(this.state.tz);
-    setInterval(this.tick.bind(this), 1000);
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(this.tick.bind(this), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   tick() {
