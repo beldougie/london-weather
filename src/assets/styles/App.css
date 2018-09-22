@@ -51,3 +51,7 @@
 	font-size: 3em;
 	color: #382F2D
 }
+
+.weather-panel .card-header div {
+  padding: 0.5em;
+}
