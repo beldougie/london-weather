@@ -1,16 +1,10 @@
 import OWMService from '../services/OWMService';
 import moment from 'moment-timezone';
 
-export const LOAD_WEATHER = 'LOAD_WEATHER';
-export const WEATHER_LOADING = 'WEATHER_LOADING';
 export const WEATHER_LOADED = 'WEATHER_LOADED';
 export const SET_TEMP_SCALE = 'SET_TEMP_SCALE';
 
 export const loadWeather = (city, scale='celsius') => dispatch => {
-  
-  // tell the UI we're loading (in case of delay)
-  dispatch({ type: WEATHER_LOADING });
-  
   const svc = new OWMService(city);
   const units = scale === 'celsius' ? 'metric' : 'imperial';
 
