@@ -13,5 +13,5 @@ export const buildClassName = (id, sunset, sunrise) => {
 };
 
 export default ({ id, sunset, sunrise, classOverrides = '' }) => {
-	return <i className={`${classOverrides} ${buildClassName(id, sunset, sunrise)} float-right`}></i>
+	return <i className={`${classOverrides} ${buildClassName(id, sunset, sunrise)}`}></i>
 }
